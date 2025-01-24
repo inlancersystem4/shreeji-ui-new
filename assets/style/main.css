@@ -38,6 +38,117 @@
   --soft-pink: 253 162 155; /* #FDA29B */
 }
 
+.montserrat-font {
+  font-family: var(--montserrat-font);
+}
+.inter-font {
+  font-family: var(--inter-font);
+}
+.outfit-font {
+  font-family: var(--outfit-font);
+}
+.lato-font {
+  font-family: var(--lato-font);
+}
+.sora-font {
+  font-family: var(--sora-font);
+}
+.cool-gray {
+  color: rgb(var(--cool-gray));
+}
+.blue-strong {
+  color: rgb(var(--blue-strong));
+}
+.white {
+  color: rgb(var(--white));
+}
+.dark-charcoal {
+  color: rgb(var(--dark-charcoal));
+}
+.light-gray {
+  color: rgb(var(--light-gray));
+}
+.charcoal {
+  color: rgb(var(--charcoal));
+}
+.gray-muted {
+  color: rgb(var(--gray-muted));
+}
+.golden-beige {
+  color: rgb(var(--golden-beige));
+}
+.gray-light {
+  color: rgb(var(--gray-light));
+}
+.gray-medium {
+  color: rgb(var(--gray-medium));
+}
+.black {
+  color: rgb(var(--black));
+}
+.gray-ash {
+  color: rgb(var(--gray-ash));
+}
+.taupe-gray {
+  color: rgb(var(--taupe-gray));
+}
+.dark-brown {
+  color: rgb(var(--dark-brown));
+}
+.emerald-green {
+  color: rgb(var(--emerald-green));
+}
+.red-dark {
+  color: rgb(var(--red-dark));
+}
+.gray-very-light {
+  color: rgb(var(--gray-very-light));
+}
+.light-pink {
+  color: rgb(var(--light-pink));
+}
+.dark-gray {
+  color: rgb(var(--dark-gray));
+}
+.light-silver {
+  color: rgb(var(--light-silver));
+}
+.mid-gray {
+  color: rgb(var(--mid-gray));
+}
+.dark-background {
+  color: rgb(var(--dark-background));
+}
+.slate-gray {
+  color: rgb(var(--slate-gray));
+}
+.olive-gray {
+  color: rgb(var(--olive-gray));
+}
+.bright-red {
+  color: rgb(var(--bright-red));
+}
+.muted-brown {
+  color: rgb(var(--muted-brown));
+}
+.vivid-red {
+  color: rgb(var(--vivid-red));
+}
+.soft-pink {
+  color: rgb(var(--soft-pink));
+}
+
+.golden-opacity {
+  background-color: var(--golden-opacity);
+}
+.brown-opacity {
+  background-color: var(--brown-opacity);
+}
+
+body {
+  font-family: var(--inter-font);
+}
+
 .auth-layout {
   position: relative;
   display: flex;
@@ -85,7 +196,7 @@
 .auth-layout form {
   position: relative;
   z-index: 50;
-  min-width: 420px;
+  width: 100%;
   max-width: 420px;
   border-radius: 0.75rem;
   border-width: 1px;
@@ -98,4 +209,127 @@
 .auth-layout form > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(1.5rem * calc(1 - 0));
   margin-bottom: calc(1.5rem * 0);
+}
+
+.btn-bg-gradient {
+  background: linear-gradient(
+      0deg,
+      rgb(var(--golden-beige)),
+      rgb(var(--golden-beige))
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  color: white;
+}
+
+.btn-bg-gradient:hover,
+.btn-bg-gradient:focus {
+  opacity: 0.8;
+}
+
+.btn-regular {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.auth-layout form button[type="submit"] {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.auth-layout form h1 {
+  color: rgb(var(--charcoal));
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.auth-layout form h6 {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: rgb(var(--cool-gray));
+}
+
+.auth-layout form input {
+  background-color: rgb(var(--white));
+  border-color: rgb(var(--light-gray));
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.875rem;
+  color: rgb(var(--dark-charcoal));
+  box-shadow: 0px 1px 2px 0px #e4e5e73d;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.438rem;
+  width: 100%;
+}
+
+.input-group .error-text {
+  font-size: 0.9rem;
+  display: none;
+  color: rgb(var(--vivid-red));
+}
+
+.input-group.error .error-text {
+  display: block;
+}
+
+.input-group .input {
+  position: relative;
+}
+
+.input-group .input input {
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.input-group.error .input input {
+  border-color: rgb(var(--soft-pink));
+  padding-right: 2rem;
+}
+
+.input-group.error.icon .input input {
+  padding-right: 3.8rem;
+}
+
+.input-group.icon input {
+  padding-right: 2rem;
+}
+
+.input-group.error.icon .input::after {
+  content: "";
+  right: 32px;
+}
+
+.input-group.error .input input:focus {
+  outline-color: rgb(var(--vivid-red));
+}
+
+.input-group.error .input::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  right: 4px;
+  background-position: center;
+  width: 1.75rem;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><g clip-path="url(%23clip0_261_10665)"><path d="M7.99967 5.33337V8.00004M7.99967 10.6667H8.00634M14.6663 8.00004C14.6663 11.6819 11.6816 14.6667 7.99967 14.6667C4.31778 14.6667 1.33301 11.6819 1.33301 8.00004C1.33301 4.31814 4.31778 1.33337 7.99967 1.33337C11.6816 1.33337 14.6663 4.31814 14.6663 8.00004Z" stroke="%23F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_261_10665"><rect width="16" height="16" fill="white"/></clipPath></defs></svg>');
 }
