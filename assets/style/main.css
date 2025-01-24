@@ -556,3 +556,37 @@ body {
   background-color: rgb(var(--light-gray));
   color: rgb(var(--dark-background));
 }
+
+.table-content {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-content table {
+  width: 100%;
+}
+
+.table-content table thead {
+  background-color: #8b848012;
+}
+
+.table-action-btn {
+  display: flex;
+  min-height: 2rem;
+  min-width: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-content table td,
+.table-content table th {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-align: left;
+}
+
+.table-content table tbody tr:nth-child(even) {
+  background-color: #8b848012;
+}
