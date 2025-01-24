@@ -282,6 +282,18 @@ body {
   border-color: rgb(var(--golden-beige));
 }
 
+.btn-regular.outline {
+  border-color: rgb(var(--golden-beige));
+  color: rgb(var(--golden-beige));
+}
+
+.btn-regular.outline:hover,
+.btn-regular.outline:focus {
+  background-color: rgb(var(--golden-beige));
+  color: rgb(var(--white));
+  border-color: transparent;
+}
+
 .auth-layout form button[type="submit"] {
   font-weight: 700;
   font-size: 1rem;
@@ -313,6 +325,35 @@ body {
   box-shadow: 0px 1px 2px 0px #e4e5e73d;
 }
 
+.customer-form input,
+.customer-form .select2-selection {
+  background-color: rgb(var(--white));
+  border-color: rgb(var(--light-gray));
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.875rem;
+  height: auto;
+  color: rgb(var(--dark-charcoal));
+  box-shadow: 0px 1px 2px 0px #e4e5e73d;
+}
+
+.select2-selection__rendered {
+  line-height: 19px !important;
+}
+
+.select2-selection__arrow {
+  top: 50% !important;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
@@ -334,6 +375,12 @@ body {
   position: relative;
 }
 
+.input-group label {
+  font-size: 0.875rem;
+  display: block;
+  color: #414651;
+}
+
 .input-group .input input {
   width: 100%;
   border-width: 1px;
@@ -343,6 +390,7 @@ body {
 .input-group.error .input input {
   border-color: rgb(var(--soft-pink));
   padding-right: 2rem;
+  position: relative;
 }
 
 .input-group.error.icon .input input {
@@ -589,4 +637,37 @@ body {
 
 .table-content table tbody tr:nth-child(even) {
   background-color: #8b848012;
+}
+
+.modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(var(--black) / 0.12);
+  padding: 1rem;
+  overflow-y: auto;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.modal-body {
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: rgb(var(--white));
+  padding: 1.5rem 2rem;
+}
+
+.modal-body.sm {
+  max-width: 36rem;
+}
+
+.modal-title {
+  font-family: var(--outfit-font);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: rgb(var(--golden-beige));
 }
