@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="./assets/style/main.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  </head>
+  <body>
+    <div class="custom-container">
+      <div class="py-2.5">
+        <div class="flex items-center justify-between flex-wrap gap-2 p-4">
+          <div class="search-wrapper">
+            <div class="icon">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 14L11.0094 11.004L14 14ZM12.6667 7.00001C12.6667 8.5029 12.0697 9.94424 11.007 11.0069C9.94427 12.0697 8.50293 12.6667 7.00004 12.6667C5.49715 12.6667 4.05581 12.0697 2.9931 11.0069C1.9304 9.94424 1.33337 8.5029 1.33337 7.00001C1.33337 5.49712 1.9304 4.05578 2.9931 2.99307C4.05581 1.93037 5.49715 1.33334 7.00004 1.33334C8.50293 1.33334 9.94427 1.93037 11.007 2.99307C12.0697 4.05578 12.6667 5.49712 12.6667 7.00001V7.00001Z"
+                  stroke="#9E9E9E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <button class="btn-regular fill text-sm font-bold px-4">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.5 2.75C8.5 2.55109 8.42098 2.36032 8.28033 2.21967C8.13968 2.07902 7.94891 2 7.75 2C7.55109 2 7.36032 2.07902 7.21967 2.21967C7.07902 2.36032 7 2.55109 7 2.75V7H2.75C2.55109 7 2.36032 7.07902 2.21967 7.21967C2.07902 7.36032 2 7.55109 2 7.75C2 7.94891 2.07902 8.13968 2.21967 8.28033C2.36032 8.42098 2.55109 8.5 2.75 8.5H7V12.75C7 12.9489 7.07902 13.1397 7.21967 13.2803C7.36032 13.421 7.55109 13.5 7.75 13.5C7.94891 13.5 8.13968 13.421 8.28033 13.2803C8.42098 13.1397 8.5 12.9489 8.5 12.75V8.5H12.75C12.9489 8.5 13.1397 8.42098 13.2803 8.28033C13.421 8.13968 13.5 7.94891 13.5 7.75C13.5 7.55109 13.421 7.36032 13.2803 7.21967C13.1397 7.07902 12.9489 7 12.75 7H8.5V2.75Z"
+                fill="currentColor"
+              />
+            </svg>
+            Add Order
+          </button>
+        </div>
+        <div>
+          <div class="table-content">
+            <table>
+              <thead>
+                <tr>
+                  <th class="montserrat-font font-bold text-sm text-nowrap">
+                    Customer name
+                  </th>
+                  <th class="montserrat-font font-bold text-sm text-nowrap">
+                    Phone number
+                  </th>
+                  <th class="montserrat-font font-bold text-sm text-nowrap">
+                    Selection
+                  </th>
+                  <th class="montserrat-font font-bold text-sm text-nowrap">
+                    Date
+                  </th>
+                  <th
+                    class="montserrat-font font-bold !text-center text-sm text-nowrap"
+                  >
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p class="font-medium montserrat-font text-sm text-nowrap">
+                      Ashokbhai pansuriya
+                    </p>
+                  </td>
+                  <td>
+                    <p class="font-medium montserrat-font text-sm text-nowrap">
+                      9878456523
+                    </p>
+                  </td>
+                  <td>
+                    <p class="font-normal jakarta-font text-sm text-nowrap">
+                      sofa | Curtain
+                    </p>
+                  </td>
+                  <td>
+                    <p class="font-light jakarta-font text-sm text-nowrap">
+                      19 DEC 2024
+                    </p>
+                  </td>
+                  <td class="w-[200px]">
+                    <div class="flex items-center justify-center gap-2.5">
+                      <button class="table-action-btn">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13"
+                            stroke="#219653"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z"
+                            stroke="#219653"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </button>
+                      <button class="table-action-btn">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3 6H5H21"
+                            stroke="#A30D11"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"
+                            stroke="#A30D11"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M10 11V17"
+                            stroke="#A30D11"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M14 11V17"
+                            stroke="#A30D11"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="p-4 flex items-center justify-center">
+            <div class="paginations">
+              <button class="step-btn">Previous</button>
+              <ul class="page-btn-list">
+                <li>
+                  <button class="active">1</button>
+                </li>
+                <li>
+                  <button>2</button>
+                </li>
+                <li>
+                  <button>3</button>
+                </li>
+              </ul>
+              <button class="step-btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

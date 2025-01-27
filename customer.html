@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>layout</title>
+    <title>customer</title>
     <link
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
@@ -178,12 +178,12 @@
       </div>
     </div>
 
-    <div class="modal">
+    <div class="modal" id="customerModal">
       <div class="modal-body sm">
         <div class="space-y-7">
           <div class="flex items-start justify-between">
             <h4 class="modal-title">Add Customer</h4>
-            <button>
+            <button id="closeModal">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -237,11 +237,17 @@
                 <p class="error-text">yayay</p>
               </div>
               <div class="input-group">
-                <label for="address">Reference By</label>
+                <label for="reference">Reference By</label>
                 <div class="input">
-                  <select class="js-example-basic-single w-full" name="state">
+                  <select
+                    id="reference"
+                    class="js-example-basic-single w-full"
+                    name="state"
+                  >
                     <option value="AL">Alabama</option>
-                    ...
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
                     <option value="WY">Wyoming</option>
                   </select>
                 </div>
@@ -269,11 +275,11 @@
     <script>
       $(document).ready(function () {
         $(".btn-regular").click(function () {
-          $("#customerModal").removeClass("hidden");
+          $("#customerModal").addClass("show");
         });
 
         $("#closeModal").click(function () {
-          $("#customerModal").addClass("hidden");
+          $("#customerModal").removeClass("show");
         });
       });
     </script>
