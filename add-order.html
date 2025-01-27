@@ -95,7 +95,7 @@
                   id="details"
                   placeholder="Enter Text / record Audio"
                 ></textarea>
-                <button class="absolute right-2.5 bottom-3.5">
+                <button type="button" class="absolute right-2.5 bottom-3.5">
                   <svg
                     width="33"
                     height="32"
@@ -138,6 +138,7 @@
                 <p class="error-text">yayay</p>
               </div>
               <button
+                type="button"
                 class="btn-regular w-fit disabled-type font-semibold px-10"
               >
                 <svg
@@ -174,6 +175,8 @@
                   Sofa
                 </h4>
                 <button
+                  type="button"
+                  id="addSelection"
                   class="btn-regular w-fit disabled-type font-semibold px-6"
                 >
                   <svg
@@ -358,14 +361,17 @@
           </div>
         </div>
         <div class="flex items-center justify-center">
-          <button class="btn-bg-gradient btn-regular font-bold px-20">
+          <button
+            type="submit"
+            class="btn-bg-gradient btn-regular font-bold px-20"
+          >
             Save Order
           </button>
         </div>
       </form>
     </div>
 
-    <div class="modal show" id="customerModal">
+    <div class="modal" id="selectionModal">
       <div class="modal-body lg">
         <div class="space-y-7">
           <div class="flex items-start justify-between">
@@ -388,7 +394,7 @@
               </svg>
             </button>
           </div>
-          <form action="#" class="space-y-10 customer-form">
+          <form action="#" class="space-y-10 order-form">
             <div class="space-y-4">
               <div class="grid grid-cols-2">
                 <div class="input-group">
@@ -402,6 +408,49 @@
                   </div>
                   <p class="error-text">yayay</p>
                 </div>
+              </div>
+              <div class="input-group icon">
+                <label for="details">Details</label>
+                <div class="input">
+                  <textarea
+                    id="details"
+                    placeholder="Enter Text / record Audio"
+                  ></textarea>
+                  <div
+                    class="absolute bottom-3.5 right-2 flex items-stretch gap-3"
+                  >
+                    <button>
+                      <img
+                        src="./assets/images/camera.png"
+                        alt="camera img"
+                        width="32px"
+                      />
+                    </button>
+                    <button>
+                      <svg
+                        width="33"
+                        height="32"
+                        viewBox="0 0 33 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <ellipse
+                          opacity="0.9"
+                          cx="16.5"
+                          cy="16.047"
+                          rx="16.5"
+                          ry="15.0604"
+                          fill="#D09F7C"
+                        />
+                        <path
+                          d="M22.241 16.8722C22.3179 16.4115 22.6873 16.0301 23.1544 16.0301C23.6214 16.0301 24.0068 16.4105 23.9441 16.8733C23.7707 18.1519 23.1943 19.2982 22.2148 20.3121C21.4021 21.155 20.4663 21.7615 19.4073 22.1315C18.6139 22.4087 17.9866 23.0992 17.9866 23.9397V24.6443C17.9866 25.1892 17.5449 25.6309 17 25.6309C16.4551 25.6309 16.0134 25.1892 16.0134 24.6443V23.9397C16.0134 23.0992 15.3864 22.4081 14.5924 22.1328C13.5252 21.7629 12.5738 21.156 11.7383 20.3121C10.7846 19.2982 10.2233 18.152 10.0545 16.8735C9.99333 16.4104 10.3786 16.0301 10.8456 16.0301C11.3127 16.0301 11.6823 16.4114 11.7571 16.8724C11.9261 17.9151 12.421 18.8063 13.2416 19.5459C14.3065 20.4474 15.5593 20.8981 17 20.8981C18.4407 20.8981 19.6779 20.4474 20.7114 19.5459C21.557 18.8062 22.0668 17.915 22.241 16.8722ZM15.7785 10.1705V16.1202C15.7785 16.4207 15.8881 16.6912 16.1074 16.9316C16.3579 17.1419 16.6555 17.2471 17 17.2471C17.3132 17.2471 17.5794 17.1419 17.7987 16.9316C18.0492 16.7212 18.1745 16.4508 18.1745 16.1202L18.2215 10.1705C18.2215 9.83991 18.0962 9.56946 17.8456 9.35912C17.5951 9.11872 17.3132 8.99852 17 8.99852C16.6868 8.99852 16.4049 9.11872 16.1544 9.35912C15.9038 9.56946 15.7785 9.83991 15.7785 10.1705ZM19.1141 18.0584C18.519 18.6294 17.8143 18.9148 17 18.9148C16.1857 18.9148 15.481 18.6294 14.8859 18.0584C14.2908 17.4875 13.9933 16.8114 13.9933 16.0301V10.2606C13.9933 9.47932 14.2908 8.8032 14.8859 8.23226C15.481 7.66132 16.1857 7.37585 17 7.37585C17.8143 7.37585 18.519 7.66132 19.1141 8.23226C19.7092 8.8032 20.0067 9.47932 20.0067 10.2606V16.0301C20.0067 16.8114 19.7092 17.4875 19.1141 18.0584Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <p class="error-text">yayay</p>
               </div>
             </div>
             <div class="flex items-center justify-center">
@@ -428,6 +477,16 @@
         });
         $("#items").select2({
           placeholder: "Select Item & Add",
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#addSelection").click(function () {
+          $("#selectionModal").toggleClass("show");
+        });
+        $("#closeModal").click(function () {
+          $("#selectionModal").removeClass("show");
         });
       });
     </script>
