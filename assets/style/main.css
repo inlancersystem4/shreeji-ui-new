@@ -851,6 +851,7 @@ body.is-modal {
 
 .category-list .category-body {
   border-top: 1px solid rgb(var(--mid-gray));
+  padding: 1.5rem;
 }
 
 .category-list .category-body .category-items-list {
